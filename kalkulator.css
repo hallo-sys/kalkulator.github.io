@@ -1,0 +1,80 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #ffffff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    position: relative;
+}
+
+video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    z-index: -1; 
+}
+
+.calculator {
+    width: 90%; /* Lebar kalkulator lebih kecil */
+    max-width: 400px; /* Maksimal lebar kalkulator */
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    background-color: rgba(255, 255, 255, 0.9); /* Sedikit transparan */
+    padding: 20px; /* Padding lebih kecil */
+    position: relative;
+    z-index: 1;
+}
+
+input {
+    width: 100%;
+    margin-bottom: 10px;
+    padding: 15px;
+    font-size: 24px;
+    text-align: right;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.buttons {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+}
+
+button {
+    height: 60px;
+    font-size: 24px;
+    background-color: #f200ff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+button.equal {
+    background-color: #28a745;
+}
+
+button.equal:hover {
+    background-color: #218838;
+}
+
+button.clear {
+    background-color: #dc3545; /* Warna merah untuk tombol C */
+}
+
+button.clear:hover {
+    background-color: #c823;
+}
